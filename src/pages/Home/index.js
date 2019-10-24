@@ -1,7 +1,12 @@
 import React, {useState} from  'react';
 import { Container, Typography, Card, Grid, TextField, Button } from '@material-ui/core';
+
+import styles from './style';
+
 export default () => {
   const [searchText, setSearchText] = useState('');
+  const classes = styles();
+
   const handleSearchTextChange = event => {
     setSearchText(event.target.value)
   };
@@ -14,26 +19,34 @@ export default () => {
     console.log(2)
   };
 
-  
+
   return (
-    <Container>
-      <Card>
-        <Grid>
-          <Typography> Bienvenido </Typography>
-        </Grid>
-        <Grid>
-          <label>icono</label> 
+    <Container className={classes.container}>
+      <Card className={classes.cardContainer}>
+        <Grid className={classes.titleGridContainer}>
+          <Grid>
+            <Typography className={classes.title}> Welcome broh! </Typography>
+          </Grid>
+          <Grid>
+            <label>Icon</label> 
+          </Grid>
         </Grid>
         <TextField
           value={searchText}
           placeholder="Buscar..."
-          onChange={handleSearchTextChange}/>
-        <Grid>
-        <Button variant="contained" onClick={handleCleanTextClick}> Limpiar </Button>
-        <Button variante="contained" color="primary" size="large" 
-          onClick={handleSearchTextClick}> 
-          Buscar
-        </Button>
+          onChange={handleSearchTextChange}
+          className={classes.textFieldSearch}
+        />
+        <Grid className={classes.buttonsContainer}>
+          <Button variant="contained" onClick={handleCleanTextClick}> 
+            Limpiar
+          </Button>
+          <Button variant="contained" color="primary" size="large" 
+            onClick={handleSearchTextClick}
+            className={classes.searchButton}
+          > 
+            Buscar
+          </Button>
         </Grid>
       </Card>
     </Container>
