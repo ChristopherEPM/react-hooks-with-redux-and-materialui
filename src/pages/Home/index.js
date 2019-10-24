@@ -1,2 +1,3 @@
 import React from  'react';
-export default () => (<div>Home</div>)
+import { Container, Typography } from '@material-ui/core';
+export default () => (<Container><Typography variant="h4">Home</Typography></Container>)

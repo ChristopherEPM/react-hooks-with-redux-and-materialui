@@ -1,11 +1,13 @@
-React Redux Router Saga Boilerplate
+Project React hooks with Redux and Material-UI
 
-This repository is created to agilize the beginning of a project and of course, you are interested in using Redux Saga & React Router. That's why I created my own easy boilerplate.
+Project to test/try the use of React js hooks, using material-ui and redux
 
-I'm using these powerful libraries
+
+
 
 * Redux - https://github.com/reduxjs/redux
 * Redux Saga - https://github.com/redux-saga/redux-saga
 * React Redux - https://github.com/reduxjs/react-redux 
 * React Router - https://github.com/ReactTraining/react-router
 * Axios - https://github.com/axios/axios
+* Material-ui/core 4.5.1
